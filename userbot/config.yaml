@@ -1,0 +1,11 @@
+# Basic configuration for the Telegram userbot
+telegram:
+  api_id: YOUR_API_ID
+  api_hash: YOUR_API_HASH
+  session: session.session
+  whitelist: []  # list of allowed user ids
+  blacklist: []  # list of blocked user ids
+llm:
+  endpoint: http://localhost:11434/api/generate
+  model: llama2
+log_file: logs/history.jsonl
