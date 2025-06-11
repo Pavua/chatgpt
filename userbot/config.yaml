@@ -1,0 +1,45 @@
+# Basic configuration for the Telegram userbot
+telegram:
+  api_id: YOUR_API_ID
+  api_hash: YOUR_API_HASH
+  session: session.session
+  whitelist: []  # list of allowed user ids
+  blacklist: []  # list of blocked user ids
+llm:
+  current: zephyr
+  temperature: 0.7
+  max_tokens: 512
+  top_p: 0.95
+  models:
+    - name: zephyr
+      type: mlx
+      endpoint: http://localhost:1234/api/generate  # LM Studio default
+    - name: llama2
+      type: gguf
+      endpoint: http://localhost:11434/api/generate  # Ollama default
+styles:
+  current: default
+  prompts:
+    - name: default
+      file: prompts/system_prompt.txt
+    - name: povar
+      file: prompts/povar_prompt.txt
+context:
+  enabled: false
+  max_history: 5
+prompts_dir: prompts
+log_file: logs/history.jsonl
+app_log_file: logs/userbot.log
+plugins_dir: plugins
+api:
+  host: 127.0.0.1
+  port: 8080
+  enabled: true
+update:
+  repo: https://github.com/your/repo.git  # optional git repo for updates
+  config_url: https://example.com/userbot.yaml  # optional remote config
+typing_delay: 1.0  # seconds to simulate typing before replying
+autotrain:
+  enabled: false
+  threshold: 100  # number of interactions before training
+chat_styles: {}
