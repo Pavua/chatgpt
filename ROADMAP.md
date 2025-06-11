@@ -1,0 +1,32 @@
+# Project Roadmap
+
+This roadmap outlines upcoming milestones for evolving the Telegram userbot toward the original goal of a fully featured macOS/iOS application with LLM integration and GUI management.
+
+## v0.2 – Bot polish
+- Refine runtime commands: add `!tokens`, `!top_p` and other generation controls
+- Support environment variables for all key paths (logs, prompts)
+- Provide optional persistent conversation context per chat
+- Improve logging format with session IDs and metadata
+
+## v0.3 – Desktop GUI
+- Create a minimal Electron frontend that communicates with the bot via a local HTTP API
+- Expose settings for model selection, prompt editing and history browsing
+- Implement theme switching and basic animations
+- Package the GUI for macOS and Windows
+
+## v0.4 – SwiftUI client
+- Build a native SwiftUI application for macOS/iOS sharing the same API
+- Support push notifications and background start on macOS
+- Allow editing of whitelist/blacklist and prompt files directly in the GUI
+
+## v0.5 – Fine-tuning tools
+- Interactive log review and dataset curation inside the GUI
+- Launch local fine-tuning jobs using the exported dataset
+- Switch models automatically once fine-tuning completes
+
+## v1.0 – Release
+- Stable cross-platform packages
+- Automatic updates and configuration sync
+- Plugin system for custom commands and integrations
+
+This plan will evolve as we gather feedback.

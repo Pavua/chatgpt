@@ -1,0 +1,29 @@
+# Basic configuration for the Telegram userbot
+telegram:
+  api_id: YOUR_API_ID
+  api_hash: YOUR_API_HASH
+  session: session.session
+  whitelist: []  # list of allowed user ids
+  blacklist: []  # list of blocked user ids
+llm:
+  current: llama2
+  temperature: 0.7
+  max_tokens: 512
+  top_p: 0.95
+  models:
+    - name: llama2
+      endpoint: http://localhost:11434/api/generate
+    - name: zephyr
+      endpoint: http://localhost:1234/api/generate
+styles:
+  current: default
+  prompts:
+    - name: default
+      file: prompts/system_prompt.txt
+    - name: povar
+      file: prompts/povar_prompt.txt
+context:
+  enabled: false
+  max_history: 5
+prompts_dir: prompts
+log_file: logs/history.jsonl
