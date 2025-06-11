@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Userbot GUI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+  <div class="toolbar">
+    <select id="modelSelect"></select>
+    <select id="styleSelect"></select>
+    <button id="reloadBtn">Reload</button>
+    <button id="themeBtn">Switch Theme</button>
+  </div>
+  <div class="model-settings">
+    <label>Endpoint</label>
+    <input id="endpoint" type="text">
+    <label>Type</label>
+    <select id="typeSelect">
+      <option value="mlx">mlx</option>
+      <option value="gguf">gguf</option>
+    </select>
+    <button id="saveModel">Save Model</button>
+  </div>
+  <textarea id="prompt" rows="5"></textarea>
+  <div class="actions">
+    <button id="savePrompt">Save Prompt</button>
+  </div>
+  <h3>Access Control</h3>
+  <div class="access">
+    <label>Whitelist</label>
+    <textarea id="whitelist" rows="2"></textarea>
+    <label>Blacklist</label>
+    <textarea id="blacklist" rows="2"></textarea>
+    <button id="saveAccess">Save Access</button>
+  </div>
+  <h3>History</h3>
+  <ul id="history"></ul>
+  <button id="exportDataset">Export Dataset</button>
+  <script src="renderer.js"></script>
+</body>
+</html>
