@@ -1,0 +1,6 @@
+__pycache__/
+*.session
+userbot/logs/
+*.zip
+gui/node_modules/
+swiftui/.build/
